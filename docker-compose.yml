@@ -3,7 +3,9 @@ services:
   web:
     image: srv-spring-admin:latest
     networks:
-      - schambeck-net
+      schambeck-net:
+        aliases:
+          - srv-spring-admin
     environment:
       - SERVER_PORT=9999
     deploy:
